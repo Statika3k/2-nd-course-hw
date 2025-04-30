@@ -20,9 +20,9 @@ a {
 .top {
   background-color: rgb(225, 255, 143);
   height: 710px;
-  background-image: url(/img/star_big.png), url(/img/Star-2.png), url(/img/Star-3.png);
+  background-image: url(../img/star_big.png), url(../img/Star-2.png), url(../img/Star-3.png);
   background-repeat: no-repeat;
-  background-position: 958px -120px, 63px 69px, calc(100% - 344px) 538px;
+  background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
 }
 .top__title {
   font-size: 64px;
@@ -99,6 +99,9 @@ a {
 .game-info {
   background-color: rgb(32, 32, 39);
   padding-bottom: 50px;
+  background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 142px) 72px, 25px 770px;
 }
 .game-info__title {
   font-size: 64px;
@@ -131,7 +134,8 @@ a {
   transition: min-height 0.3s ease;
 }
 .mini-game:hover {
-  min-height: 512px;
+  transform: scale(1.07);
+  transition: 1s;
 }
 .mini-game__content {
   padding: 32px;
@@ -163,6 +167,9 @@ a {
   flex-direction: column;
   row-gap: 32px;
   padding-bottom: 144px;
+  background-image: url(../img/Star-5game.png), url(../img/Star-6bottom.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 44px) 126px, calc(100% - 52px) 3366px;
 }
 .game-box__title {
   font-size: 64px;
@@ -225,4 +232,98 @@ a {
   line-height: 29px;
   text-align: center;
   padding-top: 60px;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+    align-self: center;
+  }
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .top__title {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .top__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .top__link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .top__button {
+    margin-top: 36px;
+  }
+  .menu-item {
+    font-size: 16px;
+    padding: 16px 27px;
+  }
+  .menu-item_first {
+    padding-left: 17px;
+  }
+  .menu-img {
+    width: 20px;
+    height: 20px;
+  }
+  .game-info {
+    display: none;
+  }
+  .game-box__title {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .game-card {
+    flex-direction: column-reverse;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+  }
+  .game-card__content {
+    padding: 30px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .game-card__image {
+    height: 50%;
+    width: 100%;
+  }
+  .game-card__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .game-card__title {
+    font-size: 32px;
+    line-height: 39px;
+    padding-bottom: 16px;
+  }
+  .game-card__desc {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 32px;
+  }
+  .footer__info {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

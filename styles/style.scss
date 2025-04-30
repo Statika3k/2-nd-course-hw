@@ -22,9 +22,9 @@ a {
 .top {
     background-color: $lightyellow;
     height: 710px;
-    background-image: url(/img/star_big.png), url(/img/Star-2.png), url(/img/Star-3.png);
+    background-image: url(../img/star_big.png), url(../img/Star-2.png), url(../img/Star-3.png);
     background-repeat: no-repeat;
-    background-position: 958px -120px, 63px 69px, calc(100% - 344px) 538px;
+    background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
 
 
     &__title {
@@ -111,6 +111,9 @@ a {
 .game-info {
     background-color: $black;
     padding-bottom: 50px;
+    background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 142px) 72px, 25px 770px;
 
     &__title {
         font-size: 64px;
@@ -146,7 +149,8 @@ a {
     transition: min-height 0.3s ease;
 
     &:hover {
-        min-height: 512px;
+        transform: scale(1.07);
+        transition: 1s;
     }
 
     &__content {
@@ -182,6 +186,9 @@ a {
     flex-direction: column;
     row-gap: 32px;
     padding-bottom: 144px;
+    background-image: url(../img/Star-5game.png), url(../img/Star-6bottom.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 44px) 126px, calc(100% - 52px) 3366px;
 
     &__title {
         font-size: 64px;
@@ -253,3 +260,5 @@ a {
         padding-top: 60px;
     }
 }
+
+@import "phone";
