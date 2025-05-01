@@ -10,6 +10,10 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+h3 {
+    max-width: 200px;
+}
+
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
@@ -20,19 +24,21 @@ a {
 }
 
 .top {
+    padding-top: 196px;
+    padding-bottom: 156px;
     background-color: $lightyellow;
-    height: 710px;
     background-image: url(../img/star_big.png), url(../img/Star-2.png), url(../img/Star-3.png);
     background-repeat: no-repeat;
-    background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
+    // background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
+    background-position: calc(100% + 486px) -323px, 63px 69px, calc(100% - 344px) 525px;
 
 
     &__title {
         font-size: 64px;
         font-weight: 700;
         line-height: 78px;
+        letter-spacing: 0px;
         color: $black;
-        padding-top: 196px;
         padding-bottom: 24px;
     }
 
@@ -54,21 +60,19 @@ a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 247px;
-        height: 66px;
         margin-top: 48px;
         box-sizing: border-box;
         border: 1px solid $black;
         border-radius: 60px;
         background: $black;
-        padding: 16px 28px;
+        padding: 16px 65px;
         text-align: center;
         color: $white;
         font-family: inherit;
         font-size: 24px;
         font-weight: 600;
         cursor: pointer;
-        transition: background 0.3s ease;
+        transition: all 0.3s ease;
 
 
         &:hover {
@@ -80,6 +84,7 @@ a {
 
 .menu {
     height: 90px;
+    width: 100%;
     background-color: $greenyellow;
     display: inline-flex;
     flex-direction: row;
@@ -113,7 +118,7 @@ a {
     padding-bottom: 50px;
     background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
     background-repeat: no-repeat;
-    background-position: calc(100% - 142px) 72px, 25px 770px;
+    background-position: calc(100% - -120px) 72px, 25px 770px;
 
     &__title {
         font-size: 64px;
