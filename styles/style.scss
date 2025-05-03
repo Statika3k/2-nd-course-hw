@@ -1,0 +1,269 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+    max-width: 200px;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.top {
+    padding-top: 196px;
+    padding-bottom: 156px;
+    background-color: $lightyellow;
+    background-image: url(../img/star_big.png), url(../img/Star-2.png), url(../img/Star-3.png);
+    background-repeat: no-repeat;
+    // background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
+    background-position: calc(100% + 486px) -323px, 63px 69px, calc(100% - 344px) 525px;
+
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        color: $black;
+        padding-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__link {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        box-sizing: border-box;
+        border: 1px solid $black;
+        border-radius: 60px;
+        background: $black;
+        padding: 16px 65px;
+        text-align: center;
+        color: $white;
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+}
+
+.menu {
+    height: 90px;
+    width: 100%;
+    background-color: $greenyellow;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+
+    &-item {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 27px 51px;
+        white-space: nowrap;
+
+        &_first {
+            padding-left: 19px;
+        }
+    }
+
+    &-img {
+        width: 36px;
+        height: 36px;
+        
+    }
+}
+
+.game-info {
+    background-color: $black;
+    padding-bottom: 50px;
+    background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - -120px) 72px, 25px 770px;
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        padding-top: 94px;
+        color: $white;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $white;
+        padding-top: 24px;
+    }
+
+    &__game-list {
+        padding-top: 72px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+}
+
+.mini-game {
+    display: flex;
+    flex-direction: column;
+    min-height: 473px;
+    grid-column: span 4;
+    background-color: $white;
+    border-radius: 30px;
+    transition: min-height 0.3s ease;
+
+    &:hover {
+        transform: scale(1.07);
+        transition: 1s;
+    }
+
+    &__content {
+        padding: 32px;
+    }
+
+    &__number {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+        font-family: inherit;
+        box-sizing: border-box;
+        width: 110px;
+        height: 36px;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        padding: 9px 15px;
+    }
+
+    &__name {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        color: $black;
+        font-family: inherit;
+        padding-top: 16px;
+    }
+}
+
+.game-box {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    padding-bottom: 144px;
+    background-image: url(../img/Star-5game.png), url(../img/Star-6bottom.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 44px) 126px, calc(100% - 52px) 3366px;
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        color: $white;
+        padding-top: 46px;
+        padding-bottom: 40px;
+    }
+}
+
+.game-card {
+    width: 100%;
+    height: 500px;
+    display: flex    ;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: $white;
+
+    &_left {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        padding: 48px;
+    }       
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        padding-bottom: 24px;
+    }
+
+    &__desc {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-bottom: 36px;
+    }
+
+    &__button {
+        width: 247px;
+        height: 66px;
+        border-radius: 60px;
+        background: $black;
+        font-size: 24px;
+        font-weight: 600;
+        color: $white;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+}
+
+.footer {
+    height: 150px;
+    background-color: $greenyellow;
+
+    &__info {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 60px;
+    }
+}
+
+@import "phone";
