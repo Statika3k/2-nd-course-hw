@@ -226,6 +226,7 @@ a {
   font-size: 24px;
   font-weight: 600;
   color: rgb(255, 255, 255);
+  font-family: inherit;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -371,6 +372,11 @@ a {
     font-size: 16px;
     line-height: 20px;
     padding-bottom: 32px;
+  }
+  .game-card__button {
+    font-size: 16px;
+    line-height: 141.69%;
+    letter-spacing: 0%;
   }
   .footer {
     height: 100px;
