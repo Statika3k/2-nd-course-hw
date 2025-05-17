@@ -89,3 +89,37 @@ switch (monthNumber) {
     default:
         console.log('Ввели что-то не то');
 }
+
+//Решение задачи используя цикл while
+// let number = 1;
+
+// while (number <= 12) {
+//     if (number >= 1 && number <=2 || number === 12) {
+//         console.log('Зима');
+//     } else if (number >= 3 && number <= 5) {
+//         console.log('Весна');
+//     } else if (number >= 6 && number <= 8) {
+//         console.log('Лето');
+//     } else if (number >= 9 && number <= 11) {
+//         console.log('Осень');
+//     }
+
+// 	number++;
+// }
+
+// Используя цикл for (такой код проще читать!)
+// for (let monthNumber = 1; monthNumber <= 12; monthNumber++) {
+// // Инициализация: let monthNumber = 1 - задаем начальное значение monthNumber
+// // Условие: monthNumber <= 12 - указываем условие продолжения цикла
+// // Шаг изменения: monthNumber++ - увеличиваем monthNumber на 1 
+// // после каждого прохождения цикла
+//    if (monthNumber >= 1 && monthNumber <=2 || monthNumber === 12) {
+//       console.log('Зима');
+//    } else if (monthNumber >= 3 && monthNumber <= 5) {
+//       console.log('Весна');
+//    } else if (monthNumber >= 6 && monthNumber <= 8) {
+//       console.log('Лето');
+//    } else if (monthNumber >= 9 && monthNumber <= 11) {
+//       console.log('Осень');
+//    }
+// }
