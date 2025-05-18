@@ -351,6 +351,17 @@ a {
     flex: 0 0 100%;
   }
 }
+@media (max-width: 767px) and (hover: none) {
+  .top__button:hover,
+  .game-card__button:hover {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .mini-game:hover {
+    transform: none;
+    transition: none;
+  }
+}
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;

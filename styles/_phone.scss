@@ -1,4 +1,17 @@
 @media (max-width: 767px) {
+        @media (hover: none) {
+        .top__button:hover,
+        .game-card__button:hover {
+            background: $black;
+            color: $white;
+        }
+  
+        .mini-game:hover {
+            transform: none;
+            transition: none;
+        }
+    }
+    
     .center {
         padding-left: 16px;
         padding-right: 16px;
