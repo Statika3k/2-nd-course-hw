@@ -8,12 +8,12 @@ alert (a);
 
 // Задание 2
 // Создайте переменную и присвойте ей значение года выпуска первого iPhone. Выведите значение переменной на экран.
-let iPhoneReleaseYear = 2007;
+const iPhoneReleaseYear = 2007;
 alert (iPhoneReleaseYear);
 
 // Задание 3
 // Создайте переменную и присвойте ей значение имени создателя языка JavaScript. Выведите значение переменной на экран.
-let nameCreatorJavaScript = "Brendan Eich";
+const nameCreatorJavaScript = "Brendan Eich";
 alert (nameCreatorJavaScript);
 
 // Задание 4
@@ -34,7 +34,7 @@ alert (result);
 // Даны переменные: a = 9 и b = 2. Найдите остаток от деления a на b и выведите результат на экран с помощью метода alert().
 let a2 = 9;
 let b2 = 2;
-let quotient = a2 / b2;
+let quotient = a2 % b2;
 alert (quotient);
 
 // Задание 7
@@ -64,7 +64,7 @@ alert (age);
 
 // Задание 9
 // Создайте объект user, у которого есть следующие свойства: name, age, isAdmin. Значения для свойств придумайте произвольные. Обратите внимание, что для свойства name значение должно быть строковым, для age — числовым, а для isAdmin — булевым.
-const user= {
+const user = {
 name: "Нина",
 age: 41,
 isAdmin: true
