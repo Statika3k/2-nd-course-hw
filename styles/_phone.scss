@@ -1,4 +1,17 @@
 @media (max-width: 767px) {
+        @media (hover: none) {
+        .top__button:hover,
+        .game-card__button:hover {
+            background: $black;
+            color: $white;
+        }
+  
+        .mini-game:hover {
+            transform: none;
+            transition: none;
+        }
+    }
+    
     .center {
         padding-left: 16px;
         padding-right: 16px;
@@ -47,12 +60,17 @@
                 border: 1px solid $black;
                 border-radius: 60px;
                 background: $black;
-                padding: 16px 65px;
+                padding: 16px 103px;
                 text-align: center;
                 color: $white;
                 font-family: inherit;
-                font-size: 24px;
+                max-width: 285px;
+                margin-left: 29px;
+                margin-right: 29px;
+                font-size: 16px;
                 font-weight: 600;
+                line-height: 141.69%;
+                letter-spacing: 0%;
                 cursor: pointer;
                 transition: all 0.3s ease;
             }
@@ -91,7 +109,6 @@
     }
 
     .game-card {
-        flex-direction: column-reverse;
         height: 100%;
         width: 100%;
         position: relative;
@@ -101,11 +118,12 @@
         overflow: hidden;
 
         &__content {
-            padding: 30px;
+            padding: 29px;
             height: 50%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
         }
 
         &__image {
@@ -133,6 +151,8 @@
         }
 
         &__button {
+            width: 100%;
+            height: 55px;
             font-size: 16px;
             line-height: 141.69%;
             letter-spacing: 0%;
@@ -143,6 +163,8 @@
         height: 100px;
 
         &__info {
+            padding-top: 40px;
+            padding-bottom: 40px;
             font-size: 16px;
             line-height: 20px;
         }

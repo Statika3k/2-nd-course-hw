@@ -65,7 +65,7 @@ a {
         border: 1px solid $black;
         border-radius: 60px;
         background: $black;
-        padding: 16px 65px;
+        padding: 18px 65px;
         text-align: center;
         color: $white;
         font-family: inherit;
@@ -290,5 +290,5 @@ a {
     }
 }
 
-@import "phone";
 @import "tablet";
+@import "phone";
