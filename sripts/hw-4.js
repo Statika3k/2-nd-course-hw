@@ -119,25 +119,24 @@ console.log(checkNumber());
 // Метод getArea, который возвращает площадь круга, вычисляемую через радиус.
 // Метод getPerimeter, который возвращает периметр окружности.
 
+function getArea() {
+    return Math.PI * this.radius * this.radius;
+}
+function getPerimeter() {
+    return 2 * Math.PI * this.radius;
+}
+
 const circle1 = {
   radius: 5,
-  getArea: function() {
-    return Math.PI * this.radius * this.radius;
-  },
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
-  }
-}
+  getArea,
+  getPerimeter,
+};
 
 const circle2 = {
   radius: 3,
-  getArea: function() {
-    return Math.PI * this.radius * this.radius;
-  },
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
-  }
-}
+  getArea,
+  getPerimeter,
+};
 
 console.log(circle1.getArea()); 
 console.log(circle1.getPerimeter());
