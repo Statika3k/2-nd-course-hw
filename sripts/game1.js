@@ -6,13 +6,17 @@ document.getElementById('playGame-1').addEventListener('click',
         alert('Я загадал число от 1 до 100. Попробуй угадать!');
 
         while (true) {
-            let guess = Number(prompt('Введи свой вариант:'));
-            attempts++;
+            let guessInput = prompt('Введи свой вариант:');
 
-            if (guess === null) {
+            if (guessInput === null) {
                 alert('Игра окончена. Поиграем в другой раз!');
                 return;
             }
+
+            let guess = Number(guessInput);
+            attempts++;
+
+            
 
             if (guess === secretNumber) {
                 alert(`Поздравляю! Ты угадал число ${secretNumber} за ${attempts} попыток!`);
