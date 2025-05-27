@@ -37,64 +37,59 @@ document.getElementById('playGame-1').addEventListener('click',
 // Игра "Простая арифметика"
 document.getElementById('playGame-2').addEventListener('click',
     function simpleArithmetic() {
-    let correctAnswers = 0;
-    let continueGame = true;
-    
-    while (continueGame) {
-        const num1 = Math.floor(Math.random() * 10) + 1;
-        const num2 = Math.floor(Math.random() * 10) + 1;
-        const operators = ['+', '-', '*', '/'];
-        const operator = operators[Math.floor(Math.random() * operators.length)];
-        let result = '';
-        let userAnswer = '';
-        let roundedResult = null; /*Будет использоваться только для деления*/
+        let correctAnswers = 0;
+        let continueGame = true;
 
-        switch (operator) {
-            case '+':
-                userAnswer = prompt(`${num1} + ${num2} = ?`);
-                result = num1 + num2;
-                break;
-            case '-':
-                userAnswer = prompt(`${Math.max(num1, num2)} - ${Math.min(num1, num2)} = ?`);
-                result = Math.max(num1, num2) - Math.min(num1, num2);
-                break;
-            case '*':
-                userAnswer = prompt(`${num1} * ${num2} = ?`);
-                result = num1 * num2;
-                break;
-            case '/':
-                userAnswer = prompt(`${Math.max(num1, num2)} / ${Math.min(num1, num2)} = ?`);
-                result = Math.max(num1, num2) / Math.min(num1, num2);
-                roundedResult = Number(result.toFixed(2));
-                break;
-        }
+        while (continueGame) {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            const operators = ['+', '-', '*', '/'];
+            const operator = operators[Math.floor(Math.random() * operators.length)];
+            let result = 0;
+            let userAnswer = '';
+            let onlyIntegersNumber = true;
 
-        if (userAnswer === null) {
-            continueGame = false;
-        }
-        else if (isNaN(userAnswer)) {
-            continueGame = false;
-        } else {
-            const userNumber = Number(userAnswer);
-            let isCorrect;
-            
-            // Для деления сравниваем с округленным результатом
-            if (operator === '/') {
-                isCorrect = Math.abs(userNumber - roundedResult) < 0.01;
-            } else {
-                isCorrect = Math.abs(userNumber - result) < 0.0001;
-            } if (isCorrect) {
+            switch (operator) {
+                case '+':
+                    userAnswer = prompt(`${num1} + ${num2} = ?`);
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    userAnswer = prompt(`${Math.max(num1, num2)} - ${Math.min(num1, num2)} = ?`);
+                    result = Math.max(num1, num2) - Math.min(num1, num2);
+                    break;
+                case '*':
+                    userAnswer = prompt(`${num1} * ${num2} = ?`);
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (Math.max(num1, num2) % Math.min(num1, num2) !== 0) {
+                        onlyIntegersNumber = false;
+                        break;
+                    } /*Проверка, что результатом деления будет целое число*/
+                    result = Math.max(num1, num2) / Math.min(num1, num2);
+                    userAnswer = prompt(`${Math.max(num1, num2)} / ${Math.min(num1, num2)} = ?`);
+                    break;
+            }
+
+            if (!onlyIntegersNumber) continue;
+            if (userAnswer === null) {
+                continueGame = false;
+                continue;
+            }
+
+            const userNumber = parseFloat(userAnswer);
+            const isCorrect = userNumber === result;
+
+            if (isCorrect) {
                 correctAnswers++;
                 alert('Правильно!');
             } else {
                 continueGame = false;
-                
-                const correctAnswer = operator === '/' ? roundedResult : result;
-                alert(`Неверно! Правильный ответ: ${correctAnswer}`);
+                alert(`Неверно! Правильный ответ: ${result}`);
             }
         }
+
+        alert(`Игра окончена. Правильных ответов: ${correctAnswers}`);
     }
-    
-    alert(`Игра окончена. Правильных ответов: ${correctAnswers}`);
-}
 )
