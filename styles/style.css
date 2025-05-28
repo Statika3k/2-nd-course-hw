@@ -8,10 +8,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h3 {
-  max-width: 200px;
-}
-
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
@@ -19,6 +15,10 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+h3 {
+  max-width: 300px;
 }
 
 .top {
@@ -121,31 +121,45 @@ a {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
+  letter-spacing: 0px;
   color: rgb(255, 255, 255);
   padding-top: 24px;
+  max-width: 772px;
 }
-.game-info__game-list {
+.game-info__container {
   padding-top: 72px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
 }
-
-.mini-game {
+.game-info__mini-game {
   display: flex;
   flex-direction: column;
-  min-height: 473px;
+  gap: 32px;
+}
+
+.mini-game {
+  display: grid;
   grid-column: span 4;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
+  cursor: pointer;
   transition: min-height 0.3s ease;
 }
 .mini-game:hover {
   transform: scale(1.07);
   transition: 1s;
 }
+.mini-game__link {
+  cursor: pointer;
+}
 .mini-game__content {
-  padding: 32px;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 36px;
 }
 .mini-game__number {
   font-size: 16px;
@@ -163,6 +177,7 @@ a {
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
+  letter-spacing: 0px;
   color: rgb(32, 32, 39);
   font-family: inherit;
   padding-top: 16px;
