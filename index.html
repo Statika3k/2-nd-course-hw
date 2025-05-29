@@ -32,55 +32,67 @@
         <p class="menu-item">Камень, ножницы, бумага</p> <img class="menu-img" src="./img/Star.svg" alt="Звездочка">
         <p class="menu-item">Генератор случайных цветов</p> <img class="menu-img" src="./img/Star.svg" alt="Звездочка">
     </div>
-    <section class="game-info center" id="game-info">
-        <h2 class="game-info__title">Об играх</h2>
-        <p class="game-info__text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может
-            поиграть каждый. Все игры доступны для пользования.</p>
-        <div class="game-info__game-list">
-            <a class="mini-game" href="#game-1">
+<section class="game-info center" id="game-info">
+    <h2 class="game-info__title">Об играх</h2>
+    <p class="game-info__text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть каждый.<br>Все игры доступны для пользования.</p>
+    <div class="game-info__container">
+        <div class="game-info__mini-game">
+            <article class="mini-game">
+                <a class="mini-game__link" href="#game-1"></a>
                 <img class="mini-game__img" src="./img/game-1.png" alt="Угадай число">
                 <div class="mini-game__content">
                     <p class="mini-game__number">Игра № 1</p>
                     <h3 class="mini-game__name">Угадай число</h3>
                 </div>
-            </a>
-            <a class="mini-game" href="#game-2">
-                <img class="mini-game__img" src="./img/game-2.png" alt="Простая арифметика">
-                <div class="mini-game__content">
-                    <p class="mini-game__number">Игра № 2</p>
-                    <h3 class="mini-game__name">Простая арифметика</h3>
-                </div>
-            </a>
-            <a class="mini-game" href="#game-3">
-                <img class="mini-game__img" src="./img/game-3.png" alt="Переверни текст">
-                <div class="mini-game__content">
-                    <p class="mini-game__number">Игра № 3</p>
-                    <h3 class="mini-game__name">Переверни текст</h3>
-                </div>
-            </a>
-            <a class="mini-game" href="#game-4">
-                <img class="mini-game__img" src="./img/game-4.png" alt="Камень, ножницы, бумага">
+            </article>
+            <article class="mini-game">
+                <a class="mini-game__link" href="#game-4"></a>
+                <img class="mini-game__img" src="./img/game-4.png" alt="Угадай число">
                 <div class="mini-game__content">
                     <p class="mini-game__number">Игра № 4</p>
                     <h3 class="mini-game__name">Камень, ножницы, бумага</h3>
                 </div>
-            </a>
-            <a class="mini-game" href="#game-5">
-                <img class="mini-game__img" src="./img/game-5.png" alt="Простая викторина">
+            </article>
+        </div>
+        <div class="game-info__mini-game">
+            <article class="mini-game">
+                <a class="mini-game__link" href="#game-2"></a>
+                <img class="mini-game__img" src="./img/game-2.png" alt="Угадай число">
+                <div class="mini-game__content">
+                    <p class="mini-game__number">Игра № 2</p>
+                    <h3 class="mini-game__name">Простая арифметика</h3>
+                </div>
+            </article>
+            <article class="mini-game">
+                <a class="mini-game__link" href="#game-5"></a>
+                <img class="mini-game__img" src="./img/game-5.png" alt="Угадай число">
                 <div class="mini-game__content">
                     <p class="mini-game__number">Игра № 5</p>
                     <h3 class="mini-game__name">Простая викторина</h3>
                 </div>
-            </a>
-            <a class="mini-game" href="#game-6">
-                <img class="mini-game__img" src="./img/game-6.png" alt="Генератор случайных цветов">
+            </article>
+        </div>
+        <div class="game-info__mini-game">
+            <article class="mini-game">
+                <a class="mini-game__link" href="#game-3"></a>
+                <img class="mini-game__img" src="./img/game-3.png" alt="Угадай число">
+                <div class="mini-game__content">
+                    <p class="mini-game__number">Игра № 3</p>
+                    <h3 class="mini-game__name">Переверни текст</h3>
+                </div>
+            </article>
+            <article class="mini-game">
+                <a class="mini-game__link" href="#game-6"></a>
+                <img class="mini-game__img" src="./img/game-6.png" alt="Угадай число">
                 <div class="mini-game__content">
                     <p class="mini-game__number">Игра № 6</p>
                     <h3 class="mini-game__name">Генератор случайных цветов</h3>
                 </div>
-            </a>
+            </article>
         </div>
-    </section>
+
+    </div>
+</section>
     <section class="game-box center" id="game-box">
         <h2 class="game-box__title">Мини-игры</h2>
         <article class="game-card">
@@ -97,7 +109,7 @@
             <div class="game-card__content">
                 <h3 class="game-card__title">Простая арифметика</h3>
                 <p class="game-card__desc">Попробуй решить простые арифметические задачи.</p>
-                <button class="game-card__button">Играть!</button>
+                <button class="game-card__button" id="playGame-2">Играть!</button>
             </div>
             <div class="game-card__image" id="game-2">
                 <img class="game-card__img" src="./img/game-2big.png" alt="Простая арифметика">
@@ -148,7 +160,8 @@
         <p class="footer__info">Все права защищены.</p>
     </footer>
     <script src="sripts/game1.js"></script>
-    <!-- <script src="sripts/hw-4.js"></script> -->
+
+
 </body>
 
 </html>
