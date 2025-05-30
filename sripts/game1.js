@@ -93,3 +93,22 @@ document.getElementById('playGame-2').addEventListener('click',
         alert(`Игра окончена. Правильных ответов: ${correctAnswers}`);
     }
 )
+
+// Игра «Переверни текст»
+document.getElementById('playGame-3').addEventListener('click',
+    function invertedText() {
+        let userText = prompt('Введите слово или текст');
+
+        if (userText === null) {
+            result.textContent = 'Вы отменили ввод текста.';
+            return;
+        }
+
+        if (userText.trim() === '') {
+            alert('Вы не ввели текст. Попробуйте снова.');
+            return;
+        }
+        const reversedText = userText.split('').reverse().join('');
+        alert(`Перевернутый текст: ${reversedText}`);
+    }
+)
