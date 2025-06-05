@@ -159,13 +159,30 @@ document.getElementById('playGame-5').addEventListener('click',
 // Игра «Камень, ножницы, бумага»
 document.getElementById('playGame-4').addEventListener('click',
     function rockPaperScissors() {
+        const choices = ["камень", "ножницы", "бумага"];
         let playAgain = true;
 
         while (playAgain) {
-            let userChoice = prompt('Выбирай: Камень, Ножницы или Бумага').toLowerCase();
+            let userChoice = prompt('Выбирай: Камень, Ножницы или Бумага');
 
-            function randomComputerChoice() {
-                const choices = ["камень", "ножницы", "бумага"];
+            if (userChoice === null) {
+                    alert("Игра окончена! Поиграем в другой раз.");
+                    break;
+                }
+
+                userChoice = userChoice.toLowerCase();
+
+                while (!choices.includes(userChoice)) {
+                    userChoice = prompt("Некорректный ввод. Выберите: камень, ножницы или бумага");
+                    if (userChoice === null) {
+                        alert("Игра окончена! Поиграем в другой раз.");
+                        playAgain = false;
+                        break;
+                    }
+                    userChoice = userChoice.toLowerCase();
+                }
+
+            function randomComputerChoice() {                
                 const randomChoices = Math.floor(Math.random() * choices.length);
                 return choices[randomChoices];
             }
