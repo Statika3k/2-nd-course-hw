@@ -166,23 +166,26 @@ document.getElementById('playGame-4').addEventListener('click',
             let userChoice = prompt('Выбирай: Камень, Ножницы или Бумага');
 
             if (userChoice === null) {
+                alert("Игра окончена! Поиграем в другой раз.");
+                playAgain = false;
+                break;
+            }
+
+            userChoice = userChoice.toLowerCase();
+
+            while (!choices.includes(userChoice)) {
+                userChoice = prompt("Некорректный ввод. Выберите: камень, ножницы или бумага");
+                if (userChoice === null) {
                     alert("Игра окончена! Поиграем в другой раз.");
+                    playAgain = false;
                     break;
                 }
-
                 userChoice = userChoice.toLowerCase();
+            }
 
-                while (!choices.includes(userChoice)) {
-                    userChoice = prompt("Некорректный ввод. Выберите: камень, ножницы или бумага");
-                    if (userChoice === null) {
-                        alert("Игра окончена! Поиграем в другой раз.");
-                        playAgain = false;
-                        break;
-                    }
-                    userChoice = userChoice.toLowerCase();
-                }
+            if (!playAgain) break;
 
-            function randomComputerChoice() {                
+            function randomComputerChoice() {
                 const randomChoices = Math.floor(Math.random() * choices.length);
                 return choices[randomChoices];
             }
