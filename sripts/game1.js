@@ -156,3 +156,68 @@ document.getElementById('playGame-5').addEventListener('click',
     }
 )
 
+// Игра «Камень, ножницы, бумага»
+document.getElementById('playGame-4').addEventListener('click',
+    function rockPaperScissors() {
+        const choices = ["камень", "ножницы", "бумага"];
+        let playAgain = true;
+
+        while (playAgain) {
+            let userChoice = prompt('Выбирай: Камень, Ножницы или Бумага');
+
+            if (userChoice === null) {
+                alert("Игра окончена! Поиграем в другой раз.");
+                playAgain = false;
+                break;
+            }
+
+            userChoice = userChoice.toLowerCase();
+
+            while (!choices.includes(userChoice)) {
+                userChoice = prompt("Некорректный ввод. Выберите: камень, ножницы или бумага");
+                if (userChoice === null) {
+                    alert("Игра окончена! Поиграем в другой раз.");
+                    playAgain = false;
+                    break;
+                }
+                userChoice = userChoice.toLowerCase();
+            }
+
+            if (!playAgain) break;
+
+            function randomComputerChoice() {
+                const randomChoices = Math.floor(Math.random() * choices.length);
+                return choices[randomChoices];
+            }
+
+            function choiceWinner(userChoice, computerChoice) {
+                if (userChoice === computerChoice) {
+                    return 'Ничья!';
+                }
+
+                if (
+                    (userChoice === "камень" && computerChoice === "ножницы") ||
+                    (userChoice === "ножницы" && computerChoice === "бумага") ||
+                    (userChoice === "бумага" && computerChoice === "камень")
+                ) {
+                    return 'Поздравляем! Вы выиграли!';
+                } else {
+                    return 'Вы проиграли. Выиграл компьютер!';
+                }
+            }
+
+            const computerChoice = randomComputerChoice();
+            const result = choiceWinner(userChoice, computerChoice);
+
+            alert(`Ваш выбор: ${userChoice};
+            Выбор компьютера: ${computerChoice};
+            Результат игры: ${result}`);
+
+            playAgain = confirm("Хотите сыграть ещё раз?");
+        }
+
+        alert("Спасибо за игру! До новых встреч!");
+    }
+)
+
+
