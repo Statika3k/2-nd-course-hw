@@ -142,6 +142,10 @@ h3 {
   gap: 32px;
 }
 
+.game-tablet {
+  display: none;
+}
+
 .mini-game {
   display: grid;
   grid-column: span 4;
@@ -284,15 +288,66 @@ h3 {
     padding-left: calc(50% - 393px);
     padding-right: calc(50% - 393px);
   }
+  .top__title {
+    font-size: 56px;
+    line-height: 68px;
+  }
+  .top__text {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .top__link {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .menu {
+    height: 68px;
+  }
+  .menu-item {
+    font-size: 24px;
+    padding: 16px 27px;
+  }
+  .menu-item_first {
+    padding-left: 17px;
+  }
+  .menu-img {
+    width: 20px;
+    height: 20px;
+  }
   .game-info {
+    display: none;
+  }
+  .game-tablet {
+    background-color: rgb(32, 32, 39);
+    display: grid;
+    background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
+    background-repeat: no-repeat;
     background-position: calc(100% + 120px) 72px, 25px 650px;
   }
-  .game-info__game-list {
+  .game-tablet__title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 68px;
+    padding-top: 80px;
+    color: rgb(255, 255, 255);
+  }
+  .game-tablet__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: rgb(255, 255, 255);
+    padding-top: 24px;
+    max-width: 772px;
+  }
+  .game-tablet__container {
+    padding-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
     gap: 24px;
   }
   .mini-game {
-    min-height: 400px;
-    grid-column: span 6;
+    grid-column: span 4;
   }
   .mini-game__content {
     padding: 24px;
@@ -304,6 +359,10 @@ h3 {
   .game-box {
     padding-bottom: 60px;
     background-position: calc(100% - 30px) 105px, calc(100% - 5px) 3010px;
+  }
+  .game-box__title {
+    font-size: 56px;
+    line-height: 68px;
   }
   .game-card {
     height: 450px;
@@ -324,25 +383,52 @@ h3 {
     padding-left: 24px;
     padding-right: 24px;
   }
+  .top__title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .top__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .top__link {
+    font-size: 20px;
+    line-height: 28px;
+  }
   .game-info {
+    display: none;
+  }
+  .game-tablet {
     background-image: none;
     padding-bottom: 30px;
   }
-  .game-info__game-list {
-    padding-top: 40px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+  .game-tablet__title {
+    font-size: 48px;
+    line-height: 58px;
+    padding-top: 60px;
   }
-  .mini-game {
-    min-height: 400px;
-    grid-column: span 1;
+  .game-tablet__text {
+    font-size: 20px;
+    line-height: 28px;
+    padding-top: 20px;
+  }
+  .game-tablet__container {
+    padding-top: 40px;
+    gap: 20px;
   }
   .mini-game__content {
     padding: 20px;
   }
   .mini-game__name {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 30px;
+    padding-top: 12px;
+  }
+  .mini-game__number {
+    font-size: 14px;
+    width: 100px;
+    height: 32px;
+    padding: 7px 12px;
   }
   .game-box {
     background-image: none;
@@ -451,6 +537,9 @@ h3 {
     height: 20px;
   }
   .game-info {
+    display: none;
+  }
+  .game-tablet {
     display: none;
   }
   .game-box {

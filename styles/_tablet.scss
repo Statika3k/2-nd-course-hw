@@ -5,17 +5,80 @@
         padding-right: calc(50% - 786px/2);
     }
 
-    .game-info {
-        background-position: calc(100% + 120px) 72px, 25px 650px;
+    .top {
 
-        &__game-list {
+        &__title {
+            font-size: 56px;
+            line-height: 68px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        &__link {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+
+    .menu {
+        height: 68px;
+        &-item {
+            font-size: 24px;
+            padding: 16px 27px;
+
+            &_first {
+                padding-left: 17px;
+            }
+        }
+
+        &-img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .game-info {
+        display: none;
+    }
+
+    .game-tablet {
+        background-color: $black;
+        display: grid;
+        background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% + 120px) 72px, 25px 650px;
+        
+        &__title {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 68px;
+            padding-top: 80px;
+            color: $white;
+        }
+
+        &__text {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0px;
+            color: $white;
+            padding-top: 24px;
+            max-width: 772px;
+        }
+
+        &__container {
+            padding-top: 72px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
             gap: 24px;
         }
     }
 
     .mini-game {
-        min-height: 400px;
-        grid-column: span 6;
+        grid-column: span 4;
 
         &__content {
             padding: 24px;
@@ -30,6 +93,11 @@
     .game-box {
         padding-bottom: 60px;
         background-position: calc(100% - 30px) 105px, calc(100% - 5px) 3010px;
+
+        &__title {
+            font-size: 56px;
+            line-height: 68px;
+        }
     }
 
     .game-card {
@@ -56,28 +124,66 @@
         padding-right: 24px;
     }
 
+     .top {
+
+        &__title {
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        &__link {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
     .game-info {
+        display: none;
+    }
+
+    .game-tablet {
         background-image: none;
         padding-bottom: 30px;
 
-        &__game-list {
+        &__title {
+            font-size: 48px;
+            line-height: 58px;
+            padding-top: 60px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 28px;
+            padding-top: 20px;
+        }
+
+        &__container {
             padding-top: 40px;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            gap: 20px;
         }
     }
 
     .mini-game {
-        min-height: 400px;
-        grid-column: span 1;
-
         &__content {
             padding: 20px;
         }
 
         &__name {
-            font-size: 28px;
-            line-height: 34px;
+            font-size: 24px;
+            line-height: 30px;
+            padding-top: 12px;
+        }
+
+        &__number {
+            font-size: 14px;
+            width: 100px;
+            height: 32px;
+            padding: 7px 12px;
         }
     }
 
