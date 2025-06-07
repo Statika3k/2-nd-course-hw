@@ -36,7 +36,6 @@ h3 {
     background-repeat: no-repeat;
     // background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
     background-position: calc(100% + 486px) -323px, 63px 69px, calc(100% - 344px) 525px;
-    scroll-behavior: smooth;
 
     &__title {
         font-size: 64px;
@@ -128,7 +127,6 @@ h3 {
     background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
     background-repeat: no-repeat;
     background-position: calc(100% - -120px) 72px, 25px 770px;
-    scroll-behavior: smooth;
 
     &__title {
         font-size: 64px;
