@@ -142,10 +142,6 @@ h3 {
   gap: 32px;
 }
 
-.game-tablet {
-  display: none;
-}
-
 .mini-game {
   display: grid;
   grid-column: span 4;
@@ -317,35 +313,7 @@ h3 {
   .game-info {
     display: none;
   }
-  .game-tablet {
-    background-color: rgb(32, 32, 39);
-    display: grid;
-    background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
-    background-repeat: no-repeat;
-    background-position: calc(100% + 120px) 72px, 25px 650px;
-  }
-  .game-tablet__title {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 68px;
-    padding-top: 80px;
-    color: rgb(255, 255, 255);
-  }
-  .game-tablet__text {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0px;
-    color: rgb(255, 255, 255);
-    padding-top: 24px;
-    max-width: 772px;
-  }
-  .game-tablet__container {
-    padding-top: 72px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 24px;
-  }
+  
   .mini-game {
     grid-column: span 4;
   }
@@ -397,24 +365,6 @@ h3 {
   }
   .game-info {
     display: none;
-  }
-  .game-tablet {
-    background-image: none;
-    padding-bottom: 30px;
-  }
-  .game-tablet__title {
-    font-size: 48px;
-    line-height: 58px;
-    padding-top: 60px;
-  }
-  .game-tablet__text {
-    font-size: 20px;
-    line-height: 28px;
-    padding-top: 20px;
-  }
-  .game-tablet__container {
-    padding-top: 40px;
-    gap: 20px;
   }
   .mini-game__content {
     padding: 20px;
@@ -537,9 +487,6 @@ h3 {
     height: 20px;
   }
   .game-info {
-    display: none;
-  }
-  .game-tablet {
     display: none;
   }
   .game-box {
