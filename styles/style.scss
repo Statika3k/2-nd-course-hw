@@ -92,15 +92,22 @@ h3 {
 
 .menu {
     height: 90px;
-    width: 100%;
-    background-color: $greenyellow;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(50px);
-    overflow: hidden;
+    white-space: nowrap;
+     animation: scroll-left 10s linear infinite;
+    
+
+    &-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: $greenyellow;
+        position: relative;
+    }
 
     &-item {
         font-size: 30px;
@@ -118,6 +125,15 @@ h3 {
         width: 36px;
         height: 36px;
         
+    }
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
 
