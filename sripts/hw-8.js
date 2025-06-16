@@ -6,8 +6,10 @@ const hiddenButton = document.querySelector('.btn');
 hiddenButton.addEventListener('click', function() {
     if(titleEL.style.display === 'none') {
         titleEL.style.display = 'block';
+        hiddenButton.textContent = 'Скрыть текст';
     } else {
         titleEL.style.display = 'none';
+        hiddenButton.textContent = 'Показать текст';
     }
 })
 
@@ -67,5 +69,10 @@ const buttonRemoveEL = document.querySelector('.btn7');
 
 buttonRemoveEL.addEventListener('click', function () {
     const firstDescription = document.querySelector('.description7');
-    firstDescription.remove();
+    if (firstDescription) {
+        firstDescription.remove();
+    } else {
+        buttonRemoveEL.disabled = true;
+        buttonRemoveEL.textContent = 'Элементы закончились';
+    }
 })
