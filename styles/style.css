@@ -156,7 +156,7 @@ h3 {
   transform: scale(1.07);
   transition: 1s;
 }
-.mini-game__link {
+.game-info__link {
   cursor: pointer;
 }
 .mini-game__content {
@@ -313,7 +313,6 @@ h3 {
   .game-info {
     display: none;
   }
-  
   .mini-game {
     grid-column: span 4;
   }
