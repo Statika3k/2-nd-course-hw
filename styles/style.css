@@ -159,6 +159,7 @@ h3 {
 .game-info__link:hover {
   transform: scale(1.07);
   transition: 1s;
+  cursor: pointer;
 }
 
 .mini-game {
@@ -170,9 +171,6 @@ h3 {
   border-radius: 30px;
   cursor: pointer;
   transition: min-height 0.3s ease;
-}
-.mini-game__link {
-  cursor: pointer;
 }
 .mini-game__content {
   padding-top: 32px;
