@@ -203,9 +203,6 @@ h3 {
 
 .game-box {
   background-color: rgb(32, 32, 39);
-  display: flex;
-  flex-direction: column;
-  row-gap: 32px;
   padding-bottom: 144px;
   background-image: url(../img/Star-5game.png), url(../img/Star-6bottom.png);
   background-repeat: no-repeat;
@@ -218,6 +215,11 @@ h3 {
   color: rgb(255, 255, 255);
   padding-top: 46px;
   padding-bottom: 40px;
+}
+.game-box__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
 }
 
 .game-card {
@@ -442,13 +444,15 @@ h3 {
     align-self: center;
   }
   .top {
+    padding-top: 147px;
+    padding-bottom: 131px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-image: url(../img/star_mob.png), url(../img/Star-2mob.png), url(../img/Star-3mob.png);
     background-repeat: no-repeat;
-    background-position: 100% 0px, 37px 64px, calc(100% - 34px) 621px;
+    background-position: 100% 0px, 37px 64px, calc(100% - 34px) 557px;
   }
   .top__title {
     font-size: 40px;
@@ -488,8 +492,12 @@ h3 {
     cursor: pointer;
     transition: all 0.3s ease;
   }
+  .menu {
+    height: 50px;
+  }
   .menu-item {
     font-size: 16px;
+    line-height: 110%;
     padding: 16px 27px;
   }
   .menu-item_first {
@@ -509,6 +517,10 @@ h3 {
   .game-box__title {
     font-size: 40px;
     line-height: 49px;
+    padding-bottom: 48px;
+  }
+  .game-box__container {
+    row-gap: 24px;
   }
   .game-card {
     height: 100%;
