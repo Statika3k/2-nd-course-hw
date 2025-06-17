@@ -220,4 +220,20 @@ document.getElementById('playGame-4').addEventListener('click',
     }
 )
 
+// Игра «Генератор случайных цветов»
+document.addEventListener('DOMContentLoaded', function() {
+    const changeColorButton = document.getElementById('playGame-6');
+    const changeBackgroundColorGameBox = document.querySelector('.game-box');
+    const changeBackgroundColorGameInfo = document.querySelector('.game-info');
 
+    changeColorButton.addEventListener('click', function() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        changeBackgroundColorGameBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        changeBackgroundColorGameInfo.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+        console.log(`Новый цвет фона: rgb(${r}, ${g}, ${b})`);
+    });
+})

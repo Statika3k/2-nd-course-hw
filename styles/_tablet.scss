@@ -6,6 +6,9 @@
     }
 
     .top {
+        background-image: url(../img/star_mob.png), url(../img/Star-2.png), url(../img/Star-3.png);
+        background-repeat: no-repeat;
+        background-position: 100% 0px, 63px 69px, calc(100% - 344px) 525px;
 
         &__title {
             font-size: 56px;
@@ -42,39 +45,6 @@
 
     .game-info {
         display: none;
-    }
-
-    .game-tablet {
-        background-color: $black;
-        display: grid;
-        background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
-        background-repeat: no-repeat;
-        background-position: calc(100% + 120px) 72px, 25px 650px;
-        
-        &__title {
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 68px;
-            padding-top: 80px;
-            color: $white;
-        }
-
-        &__text {
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 32px;
-            letter-spacing: 0px;
-            color: $white;
-            padding-top: 24px;
-            max-width: 772px;
-        }
-
-        &__container {
-            padding-top: 72px;
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            gap: 24px;
-        }
     }
 
     .mini-game {
@@ -114,6 +84,10 @@
             line-height: 28px;
             padding-bottom: 28px;
         }
+
+        &__button {
+            width: 100%;
+        }
     }
 }
 
@@ -144,28 +118,6 @@
 
     .game-info {
         display: none;
-    }
-
-    .game-tablet {
-        background-image: none;
-        padding-bottom: 30px;
-
-        &__title {
-            font-size: 48px;
-            line-height: 58px;
-            padding-top: 60px;
-        }
-
-        &__text {
-            font-size: 20px;
-            line-height: 28px;
-            padding-top: 20px;
-        }
-
-        &__container {
-            padding-top: 40px;
-            gap: 20px;
-        }
     }
 
     .mini-game {
