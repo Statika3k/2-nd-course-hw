@@ -1,0 +1,333 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    max-width: 300px;
+}
+
+.top {
+    padding-top: 196px;
+    padding-bottom: 156px;
+    background-color: $lightyellow;
+    background-image: url(../img/star_big.png), url(../img/Star-2.png), url(../img/Star-3.png);
+    background-repeat: no-repeat;
+    // background-position: calc(100% - 269px) -10px, 63px 69px, calc(100% - 344px) 838px;
+    background-position: calc(100% + 486px) -323px, 63px 69px, calc(100% - 344px) 525px;
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        color: $black;
+        padding-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $black;
+        max-width: 720px
+    }
+
+    &__link {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        box-sizing: border-box;
+        border: 1px solid $black;
+        border-radius: 60px;
+        background: $black;
+        padding: 18px 65px;
+        text-align: center;
+        color: $white;
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &-mobile {
+            display: none;
+        }
+
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+}
+
+.menu {
+    height: 90px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    white-space: nowrap;
+     animation: scroll-left 10s linear infinite;
+    
+
+    &-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: $greenyellow;
+        position: relative;
+    }
+
+    &-item {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 27px 51px;
+        white-space: nowrap;
+
+        &_first {
+            padding-left: 19px;
+        }
+    }
+
+    &-img {
+        width: 36px;
+        height: 36px;
+        
+    }
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.game-info {
+    background-color: $black;
+    padding-bottom: 50px;
+    background-image: url(../img/star_minigame.png), url(../img/Star-4mg.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - -120px) 72px, 25px 770px;
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        padding-top: 94px;
+        color: $white;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        color: $white;
+        padding-top: 24px;
+        max-width: 772px;
+    }
+
+    &__container {
+        padding-top: 72px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+
+    &__mini-game {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__link:hover {
+        transform: scale(1.07);
+        transition: 1s;
+        cursor: pointer;
+    }
+}
+
+.mini-game {
+    display: grid;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: min-height 0.3s ease;
+
+    &__content {
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 36px;
+    }
+
+    &__number {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+        font-family: inherit;
+        box-sizing: border-box;
+        width: 110px;
+        height: 36px;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        padding: 9px 15px;
+    }
+
+    &__name {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        color: $black;
+        font-family: inherit;
+        padding-top: 16px;
+    }
+}
+
+
+.game-box {
+    background-color: $black;
+    padding-bottom: 144px;
+    background-image: url(../img/Star-5game.png), url(../img/Star-6bottom.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 44px) 126px, calc(100% - 52px) 3366px;
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        color: $white;
+        padding-top: 46px;
+        padding-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}
+
+.game-card {
+    width: 100%;
+    height: 500px;
+    display: flex    ;
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: $white;
+    overflow: hidden;
+
+    &_left {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px;
+    }      
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        padding-bottom: 24px;
+    }
+
+    &__desc {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-bottom: 36px;
+    }
+
+    &__button {
+        width: 247px;
+        height: 66px;
+        border-radius: 60px;
+        background: $black;
+        font-size: 24px;
+        font-weight: 600;
+        color: $white;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+
+    &__image {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.footer {
+    height: 150px;
+    background-color: $greenyellow;
+
+    &__info {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 60px;
+    }
+}
+
+@import "tablet";
+@import "phone";
