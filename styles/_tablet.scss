@@ -6,6 +6,9 @@
     }
 
     .top {
+        background-image: url(../img/star_mob.png), url(../img/Star-2.png), url(../img/Star-3.png);
+        background-repeat: no-repeat;
+        background-position: 100% 0px, 63px 69px, calc(100% - 344px) 525px;
 
         &__title {
             font-size: 56px;
@@ -80,6 +83,10 @@
             font-size: 20px;
             line-height: 28px;
             padding-bottom: 28px;
+        }
+
+        &__button {
+            width: 100%;
         }
     }
 }
