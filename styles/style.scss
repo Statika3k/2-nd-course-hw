@@ -51,6 +51,7 @@ h3 {
         font-weight: 400;
         line-height: 32px;
         color: $black;
+        max-width: 720px
     }
 
     &__link {
@@ -174,7 +175,11 @@ h3 {
         display: flex;
         flex-direction: column;
         gap: 32px;
-        
+    }
+
+    &__link:hover {
+        transform: scale(1.07);
+        transition: 1s;
     }
 }
 
@@ -187,11 +192,6 @@ h3 {
     border-radius: 30px;
     cursor: pointer;
     transition: min-height 0.3s ease;
-
-    &:hover {
-        transform: scale(1.07);
-        transition: 1s;
-    }
 
     &__link {
         cursor: pointer;
@@ -231,9 +231,6 @@ h3 {
 
 .game-box {
     background-color: $black;
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
     padding-bottom: 144px;
     background-image: url(../img/Star-5game.png), url(../img/Star-6bottom.png);
     background-repeat: no-repeat;
@@ -246,6 +243,12 @@ h3 {
         color: $white;
         padding-top: 46px;
         padding-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
     }
 }
 
