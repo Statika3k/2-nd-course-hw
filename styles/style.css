@@ -149,7 +149,6 @@ h3 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
-  overflow: hidden;
 }
 .game-info__mini-game {
   display: flex;
