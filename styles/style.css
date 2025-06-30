@@ -301,6 +301,27 @@ h3 {
   padding-top: 60px;
 }
 
+@media (max-width: 1200px) {
+  .game-info {
+    background-position: calc(100% + 120px) 72px, -50px 770px;
+  }
+  .game-info__title {
+    font-size: 48px;
+    line-height: 60px;
+    padding-top: 60px;
+  }
+  .mini-game__number {
+    font-size: 14px;
+    padding: 7px 13px;
+  }
+  .mini-game__name {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .mini-game__name-other {
+    max-width: 230px;
+  }
+}
 @media (max-width: 1024px) {
   .center {
     padding-left: calc(50% - 393px);

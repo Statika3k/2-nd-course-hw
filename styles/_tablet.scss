@@ -1,3 +1,32 @@
+@media (max-width: 1200px) {
+    .game-info {
+        background-position: calc(100% + 120px) 72px, -50px 770px;
+
+        &__title {
+            font-size: 48px;
+            line-height: 60px;
+            padding-top: 60px;
+        }
+    }
+
+    .mini-game {
+        &__number {
+            font-size: 14px;
+            padding: 7px 13px;
+        }
+
+        &__name {
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        &__name-other {
+            max-width: 230px;
+        }
+    }
+}
+
+
 @media (max-width: 1024px) {
 
     .center {
@@ -28,6 +57,7 @@
 
     .menu {
         height: 68px;
+
         &-item {
             font-size: 24px;
             padding: 16px 27px;
@@ -45,19 +75,6 @@
 
     .game-info {
         display: none;
-    }
-
-    .mini-game {
-        grid-column: span 4;
-
-        &__content {
-            padding: 24px;
-        }
-
-        &__name {
-            font-size: 28px;
-            line-height: 34px;
-        }
     }
 
     .game-box {
@@ -98,7 +115,7 @@
         padding-right: 24px;
     }
 
-     .top {
+    .top {
 
         &__title {
             font-size: 48px;
@@ -118,25 +135,6 @@
 
     .game-info {
         display: none;
-    }
-
-    .mini-game {
-        &__content {
-            padding: 20px;
-        }
-
-        &__name {
-            font-size: 24px;
-            line-height: 30px;
-            padding-top: 12px;
-        }
-
-        &__number {
-            font-size: 14px;
-            width: 100px;
-            height: 32px;
-            padding: 7px 12px;
-        }
     }
 
     .game-box {
